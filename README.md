@@ -35,8 +35,6 @@ All survey responses are recorded in `master_dataset.csv`.
 
 ### Field Description
 
-**Note**: Description is not yet complete, awaiting contribution.
-
 | Field | Description | Type | Example |
 |-|-|-|-|
 | `survey_date` | Date on which the data was collected, in the format `M/D/YYYY` | string | 3/24/2020 |
@@ -63,42 +61,43 @@ All survey responses are recorded in `master_dataset.csv`.
 | `lsd` | Number of the days the respondent has consumed **LSD (acid)** over the past 28 days. Values range from `0` to `28`.<br><br>`-1` is reserved for respondents who has never consumed LSD. | integer | -1 |
 | `mdma` | Number of the days the respondent has consumed **MDMA (ecstacy)** over the past 28 days. Values range from `0` to `28`.<br><br>`-1` is reserved for respondents who has never consumed MDMA. | integer | -1 |
 | `contacts_count` | Number of people the respondent was in close contact with over the past week. Values range from `0` to `20`.<br><br>`21` is reserved for >20 contacts. | integer | 21 |
-| `house_count` |  |  |  |
-| `public_transport_count` |  |  |  |
-| `working` |  |  |  |
-| `worried` |  |  |  |
-| `rate_reducing_risk_single` |  |  |  |
-| `rate_reducing_risk_single_social_distancing` |  |  |  |
-| `rate_reducing_risk_single_washing_hands` |  |  |  |
-| `rate_reducing_risk_house` |  |  |  |
-| `rate_reducing_risk_house_social_distancing` |  |  |  |
-| `rate_reducing_risk_house_washing_hands` |  |  |  |
-| `rate_reducing_risk_house_sanitizer` |  |  |  |
-| `rate_reducing_mask` |  |  |  |
-| `rate_reducing_mask_type` |  |  |  |
-| `rate_reducing_government_action` |  |  |  |
-| `rate_reducing_government_control` |  |  |  |
-| `rate_reducing_government_spend` |  |  |  |
-| `covid19_positive` |  |  |  |
-| `covid19_symptoms` |  |  |  |
-| `covid19_contact` |  |  |  |
-| `asthma` |  |  |  |
-| `kidney_disease` |  |  |  |
-| `liver_disease` |  |  |  |
-| `compromised_immune` |  |  |  |
-| `heart_disease` |  |  |  |
-| `lung_disease` |  |  |  |
-| `diabetes` |  |  |  |
-| `hiv_positive` |  |  |  |
-| `hypertension` |  |  |  |
-| `other_chronic` |  |  |  |
-| `nursing_home` |  |  |  |
-| `health_worker` |  |  |  |
-| `prescription_medication` |  |  |  |
-| `opinion_infection` |  |  |  |
-| `opinion_mortality` |  |  |  |
-| `risk_infection` |  |  |  |
-| `risk_mortality` |  |  |  |
+| `house_count` | How many people you live with other than you | 0-21 people |
+| `public_transport_count` | How many times do you catch public transport a week | "0-15 (0 none | 15 = 15 or more)" |
+| `working` | Do you work | STRING |
+| `worried` | How worried are you about covid 1-5 | 1 not worried 5 very worried |
+| `rate_reducing_risk_single` | Opinion do you think you are at risk of infection | -2 disapprove +2 approve 0 nutral |
+| `rate_reducing_risk_single_social_distancing` | Opinion do you think social distances will reduce risk of infection | -2 disapprove` +2 approve 0 nutral |
+| `rate_reducing_risk_single_washing_hands` | Opinion do you think washing hands will reduce risk of infection | -2 disapprove +2 approve 0 nutral |
+| `rate_reducing_risk_house` | Opinion  of someone in house getting infected | -2 disapprove +2 approve 0 nutral |
+| `rate_reducing_risk_house_social_distancing` | Opinion does social distancing reducing risk of infection in your house | -2 disapprove +2 approve 0 nutral |
+| `rate_reducing_risk_house_washing_hands` | Opinion does washing hands reduce risk of infection in your house | -2 disapprove +2 approve 0 nutral |
+| `rate_reducing_risk_house_sanitizer` | Opinion does sanitizer reduce risk of infection in your house | -2 disapprove +2 approve 0 nutral |
+| `rate_reducing_mask` | Do you think wearing a mask will reduce the risk of catching covid | 1 not at all 5 will definatly reduce risk |
+| `rate_reducing_mask_type` | What type of mark do you use | STRING |
+| `rate_reducing_government_action` | Do you approve of government poliices | -2 disapprove +2 approve 0 nutral |
+| `rate_reducing_government_control` | Do you approve of government controls | -2 disapprove +2 approve 0 nutral |
+| `rate_reducing_government_spend` | Do you approve of government spending  | -2 disapprove +2 approve 0 nutral |
+| `covid19_positive` | Are you or have you been covid positive  | "1 yes | 0 no" |
+| `covid19_symptoms` | Have you had covid symptoms | "1 yes | 0 no" |
+| `covid19_contact` | Have you been in contact with someone who was confirmed covid positive | "1 yes | 0 no" |
+| `asthma` | Do you have asthma | "1 yes | 0 no" |
+| `kidney_disease` | Do you have kidney disease | "1 yes | 0 no" |
+| `liver_disease` | Do you have liver disease | "1 yes | 0 no" |
+| `compromised_immune` | Do you have compromised immune | "1 yes | 0 no" |
+| `heart_disease` | Do you have heart disease | "1 yes | 0 no" |
+| `lung_disease` | Do you have lung disease | "1 yes | 0 no" |
+| `diabetes` | Do you have diabetes | "1 yes | 0 no" |
+| `hiv_positive` | Do you have hiv | "1 yes | 0 no" |
+| `hypertension` | Do you have hypertension | "1 yes | 0 no" |
+| `other_chronic` | Do you have other chronic contidtions | "1 yes | 0 no" |
+| `nursing_home` | are you in a nursing home | "1 yes | 0 no" |
+| `health_worker` | Are you a health worker | "1 yes | 0 no" |
+| `prescription_medication` | List of prescription medication | comma seperated list |
+| `opinion_infection` | Self rated risk of infection 0 - 100% | 5 - 95 |
+| `opinion_mortality` | Do you have opinion_mortality | 5 - 95 |
+| `risk_infection` | Nexoid calcuated risk of infection | 5 - 100 % |
+| `risk_mortality` | Nexoid caculated risk of mortality | 0.05 - 75% |
+
 
 **Note**: Fields may be empty.
 
